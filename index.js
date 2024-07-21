@@ -1,18 +1,28 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const normalizedStr = word.toLowerCase();
+  return normalizedStr === normalizedStr.split('').reverse().join('');
 }
 
 /* 
-  Add your pseudocode here
+  Function isPalindrome(string)
+    Convert string to lowercase
+    Reverse the lowercase string
+    If the original lowercase string is equal to the reversed string
+        Return true
+    Else
+        Return false
 */
 
 /*
-  Add written explanation of your solution here
+  The function first converts the input string to lowercase to ensure the comparison 
+  is case-insensitive. It then reverses the string by splitting it into an array of 
+  characters, reversing the array, and joining the characters back into a string. Finally, 
+  it compares the original lowercase string with the reversed string. If they are identical,
+  the function returns true, indicating the string is a palindrome; otherwise, it returns
+  false. This approach ensures accurate palindrome detection for any given string.
 */
 
-// You can run `node index.js` to view these console logs
 if (require.main === module) {
-  // add your own custom tests in here
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
